@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de CPF</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Validador de CPF</h1>
+    </header>
+    <main>
+        <form class="form" onsubmit="validarCPF(event, this)">
+            <div class="row">
+                <input type="text" pattern="\d*" maxlength="11" name="cpf" placeholder="Insira o CPF" class="inputCPF">
+            </div>
+            <div class="aviso">* Insira apenas números.</div>
+            <br>
+            <input type="submit" value="Validar CPF" class="submitBtn">
+        </form>
+        <div class="resposta">
+            <h2>Resposta:</h2>
+        </div>
+    </main>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/axios.min.js"></script>
+</body>
+
+</html>

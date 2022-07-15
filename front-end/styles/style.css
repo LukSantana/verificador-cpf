@@ -1,0 +1,76 @@
+@import url('reset.css');
+
+:root{
+    --darkColor: #0d1113;
+    --warningRed: #B33A3A
+}
+
+body{
+    height: 100vh;
+    font-family: Arial,sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--darkColor);
+}
+
+h1{
+    color: #fff;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+main{
+    height: 90vh;
+    margin-top: 2vh;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputCPF{
+    width: 100%;
+    margin: 0vh 0.5vw 0vh 0.5vw;
+    padding: 0.8rem;
+    border: #000 1px solid;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.aviso{
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    color: var(--warningRed);
+    font-weight: bold;
+}
+
+.submitBtn{
+    margin-left: 0.5vw;
+    border: #000 1px solid;
+    border-radius: 5px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: var(--darkColor);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.resposta{
+    padding: 1rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+
+.resposta h2{
+    font-size: 1rem;
+    font-weight: 600;
+}
