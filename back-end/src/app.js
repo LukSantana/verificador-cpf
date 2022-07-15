@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000;
 
-const validarCPF = require('../lib/verificador_cpf')
+const verificarCPF = require('../lib/verificador_cpf')
 
 app.get("/validar-cpf/:cpf", (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     let cpf = req.params.cpf
-    let status = validarCPF.validarCPF(cpf)
+    let status = verificarCPF.validarCPF(cpf)
     let unidadeFederativa = status ? validarCPF.buscarUnidadeFederativa(cpf) : "-"
 
     res.json({
