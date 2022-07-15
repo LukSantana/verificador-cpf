@@ -4,7 +4,7 @@ function validarCPF(event, form) {
     if (inputCpf) {
         const cpf = inputCpf.value;
         if (cpf.length === 11) {
-            const URL = `http://localhost/validar-cpf/${cpf}`;
+            const URL = `https://verificador-cpf.netlify.app/validar-cpf/${cpf}`;
             axios.request(URL)
                 .then(resposta => mostrarResposta(resposta.data))
                 .catch(erro => console.error(erro))
