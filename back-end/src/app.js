@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 const validarCPF = require('../lib/verificador_cpf')
 
-app.get("/validar-cpf/:cpf", (req, res) => {
+app.get("https://verificador-cpf.herokuapp.com/validar-cpf/:cpf", (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     let cpf = req.params.cpf
     let status = validarCPF.verificarCPF(cpf)
