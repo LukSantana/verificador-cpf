@@ -1,11 +1,12 @@
 function validarCPF(event, form) {
+    console.log('i')
     event.preventDefault();
     const inputCpf = form.cpf;
     if (inputCpf) {
         const cpf = inputCpf.value;
         if (cpf.length === 11) {
             const URL = `https://verificador-cpf.herokuapp.com/validar-cpf/${cpf}`;
-            axios.request(URL)
+            app.request(URL)
                 .then(resposta => mostrarResposta(resposta.data))
                 .catch(erro => console.error(erro))
         }
